@@ -18,7 +18,9 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
+  font-weight: 500;
   font-size: 16px;
+  color: var(--text-color);
 }
 
 img {
@@ -29,6 +31,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .site-container {
@@ -78,9 +81,16 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: 1850px;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
+  width: 100%;
   max-width: var(--container-width);
 }
 
@@ -104,4 +114,48 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.primary-link {
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: width 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -8px;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition: width 0.3s;
+  }
+}
+
+button svg,
+a svg {
+  transition: all 0.3s;
+}
+
+button:hover svg,
+a:hover svg {
+  fill: var(--accent-color);
+  transition: all 0.3s;
 }
