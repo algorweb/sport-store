@@ -1,0 +1,39 @@
+.banners {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    @include bg-cover;
+
+    overflow: hidden;
+    padding: 60px 300px 60px 60px;
+    width: 33%;
+    background-color: var(--bg-color);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__item--women-voleyb-shoes {
+    background-image: url("../img/banner-1.jpg");
+  }
+
+  &__item--men-run-shoes {
+    background-image: url("../img/banner-2.jpg");
+  }
+
+  &__item--small-tennis {
+    background-image: url("../img/banner-3.jpg");
+  }
+}
