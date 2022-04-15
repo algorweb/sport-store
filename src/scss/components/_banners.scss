@@ -9,6 +9,9 @@
   &__item {
     @include bg-cover;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
     padding: 60px 300px 60px 60px;
     width: 33%;
