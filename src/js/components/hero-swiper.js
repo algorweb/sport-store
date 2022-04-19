@@ -1,8 +1,10 @@
 // Подключение слайдера Swiper JS
 import Swiper, { Navigation, Pagination } from '../vendor/swiper.js';
-// import Swiper, { Navigation, Pagination } from 'swiper';
-const swiper = new Swiper('.hero__slider', {
+
+const swiperHero = new Swiper('.hero__swiper', {
   slidesPerView: 1,
+  speed: 700,
+  mousewheel: true,
   pagination: {
     el: ".slider-pagination",
     clickable: true,

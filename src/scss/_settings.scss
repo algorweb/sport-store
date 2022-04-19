@@ -34,8 +34,17 @@ a {
   color: inherit;
 }
 
+h3 {
+  margin: 0;
+}
+
 .site-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  min-height: 100vh;
 }
 
 .is-hidden {
@@ -118,15 +127,10 @@ a {
 
 .primary-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 5px;
   padding-bottom: 5px;
   transition: width 0.3s;
-
-  &:hover {
-    color: var(--accent-color);
-    transition: width 0.3s;
-  }
 
   &::after {
     content: "";
@@ -141,6 +145,18 @@ a {
     transition: width 0.3s;
   }
 
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+    transition: width 0.3s;
+
+    &::after {
+      background-color: var(--accent-color);
+      transition: width 0.3s;
+    }
+  }
+
+  &:focus::after,
   &:hover::after {
     left: 0;
     right: auto;
@@ -148,12 +164,36 @@ a {
     transition: width 0.3s;
   }
 
+  &:active,
   &--current {
-    color: var(--accent-color);
+    color: var(--accent-dark-color);
+    transition: width 0.3s;
 
     &::after {
       width: 100%;
+      background-color: var(--accent-dark-color);
+      transition: width 0.3s;
     }
+  }
+}
+
+.transition-custom {
+  transition: all 0.3s;
+}
+
+.primary-small-link {
+  transition: all 0.3s;
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+    transition: all 0.3s;
+  }
+
+  &:active,
+  &--current {
+    color: var(--accent-dark-color);
+    transition: all 0.3s;
   }
 }
 
@@ -166,4 +206,18 @@ button:hover svg,
 a:hover svg {
   fill: var(--accent-color);
   transition: all 0.3s;
+}
+
+.text__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.text__str {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--text-light-color);
 }

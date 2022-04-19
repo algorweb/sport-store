@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" class="page page--catalog">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <h1 class="visually-hidden">Интернет-магазин спортивный товаров Zonex.</h1>
+  <div class="site-container">
+    <header class="header header--catalog">
+  <div class="container-fluid header__container">
+    <div class="header__top">
+      <nav class="nav header__nav" aria-label="Навигационное меню">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
+          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
+          <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
+        </ul>
+      </nav>
+      <a class="header__logo-lnk">
+        <img class="header__logo" src="img/logo.png" width="172" height="45" alt="Интернет-магазин спортивный товаров Zonex.">
+      </a>
+      <ul class="shop-nav header__shop-nav list-reset">
+        <li class="shop-nav__item">
+          <form action="#" class="shop-nav__search-form search-form">
+            <!-- <label class="search-form__label">
+              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Имя">
+            </label> -->
+            <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка поиска">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+        </li>
+        <li class="shop-nav__item">
+          <a href="#" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#user"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="shop-nav__item">
+          <a href="" class="shop-nav__cart cart" aria-label="Переход на страницу корзины">
+            <span class="cart__icon">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </span>
+            <span class="cart__quantity"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header__bottom">
+        <ul class="menu menu__list list-reset" aria-label="Меню категорий">
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Волейбольные кроссовки</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Беговые кроссовки</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Теннисные кроссовки</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Мячи</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Фитнес</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Наколенники</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Настольный теннис</a></li>
+          <li class="menu__item"><a href="#" class="menu__link primary-link">Рюкзаки</a></li>
+        </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="catalog-slider">
+  <h2 class="visually-hidden">Слайдер товаров в каталоге</h2>
+  <div class="swiper catalog-slider__container container-fluid">
+    <div class="swiper-wrapper catalog-slider__wrapper">
+      <div class="swiper-slide catalog-slider__slide">
+        <div class="catalog-slider__content">
+          <h3 class="catalog-slider__title">Самые популярные технологии амортизации обуви</h3>
+          <p class="catalog-slider__descr">Создать кроссовки — сложно. Создать красивые кроссовки в разы
+            сложнее, а создать красивые и комфортные кроссовки — это искусство.</p>
+          <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
+          <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+          <img src="img/hero-slider-1.png" alt="" class="catalog-slider__img" width="200" height="200">
+        </div>
+      </div>
+      <div class="swiper-slide catalog-slider__slide">
+        <div class="catalog-slider__content">
+          <h3 class="catalog-slider__title">Кроссовки беговые мужские ASICS VERSABLAST</h3>
+          <p class="catalog-slider__descr">Легкие кроссовки Versablast от ASICS созданы для бега и тренировок
+            в спортзале.</p>
+          <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
+          <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+          <img src="img/hero-slider-2.png" alt="" class="catalog-slider__img" width="200" height="200">
+        </div>
+      </div>
+      <div class="swiper-slide catalog-slider__slide">
+        <div class="catalog-slider__content">
+          <h3 class="catalog-slider__title">Кроссовки мужские ASICS MAGIC SPEED</h3>
+          <p class="catalog-slider__descr">Универсальные кроссовки Magic Speed от ASICS подойдут как для участия
+            в забегах на скорость, так и для обычных тренировок.</p>
+          <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
+          <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+          <img src="img/hero-slider-3.png" alt="" class="catalog-slider__img" width="200" height="200">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next catalog-slider__btn-next">
+      <svg class="">
+        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+      </svg>
+    </div>
+    <div class="swiper-button-prev catalog-slider__btn-prev">
+      <svg class="">
+        <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+      </svg>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__menu-service">
+        <h3 class="footer__menu-title text-title">Для клиентов</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str"><a href="tel:+74951234567" class="footer__menu-link primary-small-link">Телефон: +-74-95
+              123
+              45 67</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Чат с Нами</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">О Нас</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Сроки и Условия</a></li>
+        </ul>
+      </div>
+      <div class="footer__company">
+        <h3 class="footer__menu-title text-title">О компании</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Что Мы делаем</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Наши услуги</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Статьи</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__menu-title text-title">Наша почта</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str">Подпишитесь на нашу рассылку и
+            получите скидку 15% на первую покупку.</li>
+          <li class="footer__menu-item text-str">
+            <form action="#" class="footer__form">
+              <label class="footer__form-label">
+                <input type="text" name="Имя" class="input-reset footer__form-input" placeholder="Электронная почта">
+              </label>
+              <button class="btn-reset footer__form-btn">Подписаться</button>
+            </form>
+          </li>
+          <li class="footer__menu-item text-str">*Не беспокойтесь Мы НЕ
+            спамим.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <ul class="footer__menu footer__menu--flex list-reset">
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link">Доставка и
+            самовывоз</a></li>
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link">Оплата</a>
+        </li>
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#"
+            class="footer__menu-link">Возврат-обмен</a></li>
+      </ul>
+      <ul class="footer__social list-reset" title="Наши социальные странички">
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--fb"
+            aria-label="Наша страничка в Фейсбуке">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--vk"
+            aria-label="Наша страничка во Вконтакте">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--inst"
+            aria-label="Наша страничка в Инстаграм">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

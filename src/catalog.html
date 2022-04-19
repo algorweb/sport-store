@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page page--catalog">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <h1 class="visually-hidden">Интернет-магазин спортивный товаров Sport-Ritm.</h1>
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/catalog-slider.html')
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        @include('html/breadcrumbs.html')
+        <div class="catalog-content">
+          <div class="container-fluid">
+            @include('html/catalog-filter.html')
+            @include('html/catalog-grid.html')
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

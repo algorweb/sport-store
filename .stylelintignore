@@ -1,3 +1,5 @@
 src/scss/vendor/*.*
 src/*.html
 src/partials/*.html
+src/img/*.*
+src/js/*.*

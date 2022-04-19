@@ -10,6 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hero_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hero-swiper */ "./src/js/components/hero-swiper.js");
+/* harmony import */ var _components_hero_catalog_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hero-catalog-swiper */ "./src/js/components/hero-catalog-swiper.js");
+
 
 
 /***/ }),
@@ -125,6 +127,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/hero-catalog-swiper.js":
+/*!**************************************************!*\
+  !*** ./src/js/components/hero-catalog-swiper.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vendor/swiper.js */ "./src/js/vendor/swiper.js");
+/* harmony import */ var _vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0__);
+// Подключение слайдера Swiper JS
+
+var swiperCatalog = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())(".catalog-slider__container", {
+  slidesPerView: 1,
+  speed: 700,
+  mousewheel: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/hero-swiper.js":
 /*!******************************************!*\
   !*** ./src/js/components/hero-swiper.js ***!
@@ -136,10 +162,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vendor/swiper.js */ "./src/js/vendor/swiper.js");
 /* harmony import */ var _vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0__);
 // Подключение слайдера Swiper JS
- // import Swiper, { Navigation, Pagination } from 'swiper';
 
-var swiper = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())('.hero__slider', {
+var swiperHero = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())('.hero__swiper', {
   slidesPerView: 1,
+  speed: 700,
+  mousewheel: true,
   pagination: {
     el: ".slider-pagination",
     clickable: true,

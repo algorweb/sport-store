@@ -17,18 +17,18 @@
 <body class="page__body">
   <h1 class="visually-hidden">Интернет-магазин спортивный товаров Zonex.</h1>
   <div class="site-container">
-    <header class="header">
+    <header class="header header--catalog">
   <div class="container-fluid header__container">
     <div class="header__top">
       <nav class="nav header__nav" aria-label="Навигационное меню">
         <ul class="nav__list list-reset">
           <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Акции</a></li>
+          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
           <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
         </ul>
       </nav>
       <a class="header__logo-lnk">
-        <img class="header__logo" src="img/logo.png" width="117" height="22" alt="Интернет-магазин спортивный товаров Zonex.">
+        <img class="header__logo" src="img/logo.png" width="172" height="45" alt="Интернет-магазин спортивный товаров Zonex.">
       </a>
       <ul class="shop-nav header__shop-nav list-reset">
         <li class="shop-nav__item">
@@ -79,28 +79,29 @@
 
     <main class="main">
       <section class="hero">
+  <h2 class="visually-hidden">Слайдер товаров на главной странице.</h2>
   <div class="hero__container">
-    <div class="swiper hero__slider slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="slider__wrap container">
-            <h2 class="slider__title">Самые популярные технологии амортизации обуви</h2>
-            <p class="slider__descr">Создать кроссовки — сложно. Создать красивые кроссовки в разы сложнее, а создать красивые и комфортные кроссовки — это искусство.</p>
-            <img src="img/hero-slider-1.png" alt="" class="slider__img" width="200" height="200">
+    <div class="swiper hero__swiper slider">
+      <div class="swiper-wrapper hero__wrapper">
+        <div class="swiper-slide hero__slide">
+          <div class="hero__content container">
+            <h3 class="hero__title">Самые популярные технологии амортизации обуви</h3>
+            <p class="hero__descr">Создать кроссовки — сложно. Создать красивые кроссовки в разы сложнее, а создать красивые и комфортные кроссовки — это искусство.</p>
+            <img src="img/hero-slider-1.png" alt="" class="hero__img" width="200" height="200">
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="slider__wrap container">
-            <h2 class="slider__title">Кроссовки беговые мужские ASICS VERSABLAST</h2>
-            <p class="slider__descr">Легкие кроссовки Versablast от ASICS созданы для бега и тренировок в спортзале.</p>
-            <img src="img/hero-slider-2.png" alt="" class="slider__img" width="200" height="200">
+        <div class="swiper-slide hero__slide">
+          <div class="hero__content container">
+            <h3 class="hero__title">Кроссовки беговые мужские ASICS VERSABLAST</h3>
+            <p class="hero__descr">Легкие кроссовки Versablast от ASICS созданы для бега и тренировок в спортзале.</p>
+            <img src="img/hero-slider-2.png" alt="" class="hero__img" width="200" height="200">
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="slider__wrap container">
-            <h2 class="slider__title">Кроссовки мужские ASICS MAGIC SPEED</h2>
-            <p class="slider__descr">Универсальные кроссовки Magic Speed от ASICS подойдут как для участия в забегах на скорость, так и для обычных тренировок.</p>
-            <img src="img/hero-slider-3.png" alt="" class="slider__img" width="200" height="200">
+        <div class="swiper-slide hero__slide">
+          <div class="hero__content container">
+            <h3 class="hero__title">Кроссовки мужские ASICS MAGIC SPEED</h3>
+            <p class="hero__descr">Универсальные кроссовки Magic Speed от ASICS подойдут как для участия в забегах на скорость, так и для обычных тренировок.</p>
+            <img src="img/hero-slider-3.png" alt="" class="hero__img" width="200" height="200">
           </div>
         </div>
       </div>
@@ -128,6 +129,7 @@
 </section>
 
       <section class="main-products">
+  <h2 class="visually-hidden">Подборка актуальных товаров из новинок, распродажи и топ продаж.</h2>
   <div class="main-products__grid-container container-fluid">
     <ul class="main-products__nav list-reset">
       <li class="main-products__item"><button
@@ -303,7 +305,7 @@
     </div>
   </div>
   <div class="main-products__more more">
-    <button class="more__btn btn-reset">
+    <button class="more__btn btn-reset" type="button">
       <span class="more__text">Больше товаров</span>
       <svg class="more__svg">
         <use xlink:href="img/sprite.svg#arrow-down"></use>
@@ -312,10 +314,113 @@
   </div>
 </section>
 
+      <section class="shop-banners">
+  <ul class="shop-banners__list list-reset">
+    <li class="shop-banners__item">
+      <picture>
+        <source srcset="img/shop-banner-1.avif" type="image/avif">
+        <source srcset="img/shop-banner-1.webp" type="image/webp">
+        <img loading="lazy" src="img/shop-banner-1.jpg" class="shop-banners__img" width="960" height="420" alt="Категория мужская одежда.">
+      </picture>
+      <div class="shop-banners__wrap-text">
+        <h3 class="shop-banners__title">Мужская одежда</h3>
+        <a href="#" class="shop-banners__link primary-link">Перейти</a>
+      </div>
+    </li>
+    <li class="shop-banners__item">
+      <picture>
+        <source srcset="img/shop-banner-2.avif" type="image/avif">
+        <source srcset="img/shop-banner-2.webp" type="image/webp">
+        <img loading="lazy" src="img/shop-banner-2.jpg" class="shop-banners__img" width="960" height="420" alt="Список категорий. Одежда на любой вкус.">
+      </picture>
+      <div class="shop-banners__wrap-text">
+        <h3 class="shop-banners__title">Одежда на любой вкус</h3>
+        <a href="#" class="shop-banners__link primary-link">Перейти</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
     </main>
 
     <footer class="footer">
-  <div class="container"></div>
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__menu-service">
+        <h3 class="footer__menu-title text-title">Для клиентов</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str"><a href="tel:+74951234567" class="footer__menu-link primary-small-link">Телефон: +-74-95
+              123
+              45 67</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Чат с Нами</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">О Нас</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Сроки и Условия</a></li>
+        </ul>
+      </div>
+      <div class="footer__company">
+        <h3 class="footer__menu-title text-title">О компании</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Что Мы делаем</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Наши услуги</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">Статьи</a></li>
+          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h3 class="footer__menu-title text-title">Наша почта</h3>
+        <ul class="footer__menu list-reset">
+          <li class="footer__menu-item text-str">Подпишитесь на нашу рассылку и
+            получите скидку 15% на первую покупку.</li>
+          <li class="footer__menu-item text-str">
+            <form action="#" class="footer__form">
+              <label class="footer__form-label">
+                <input type="text" name="Имя" class="input-reset footer__form-input" placeholder="Электронная почта">
+              </label>
+              <button class="btn-reset footer__form-btn">Подписаться</button>
+            </form>
+          </li>
+          <li class="footer__menu-item text-str">*Не беспокойтесь Мы НЕ
+            спамим.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <ul class="footer__menu footer__menu--flex list-reset">
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link">Доставка и
+            самовывоз</a></li>
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link">Оплата</a>
+        </li>
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#"
+            class="footer__menu-link">Возврат-обмен</a></li>
+      </ul>
+      <ul class="footer__social list-reset" title="Наши социальные странички">
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--fb"
+            aria-label="Наша страничка в Фейсбуке">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--vk"
+            aria-label="Наша страничка во Вконтакте">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="#" target="_blank" class="footer__social-link footer__social-link--inst"
+            aria-label="Наша страничка в Инстаграм">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>
 
   </div>

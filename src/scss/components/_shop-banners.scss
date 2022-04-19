@@ -1,0 +1,60 @@
+.shop-banners {
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 22%;
+    width: 50%;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: rgb(215, 8, 8);
+      opacity: 0.102;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(-50%);
+  }
+
+  &__wrap-text {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+  }
+}

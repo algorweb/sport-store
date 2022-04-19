@@ -1,0 +1,118 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__top {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 100px;
+  }
+
+  &__menu-service {
+    width: 25%;
+  }
+
+  &__menu-title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__menu {
+  }
+
+  &__menu--flex {
+    display: flex;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__menu-item--flex {
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__menu-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &__company {
+    width: 25%;
+  }
+
+  &__newsletter {
+    width: 50%;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--text-color);
+    padding-bottom: 15px;
+  }
+
+  &__form-label {
+  }
+
+  &__form-input {
+    outline: none;
+  }
+
+  &__form-btn {
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-item {
+    width: 30px;
+    height: 31px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover a svg {
+      fill: var(--accent-color)
+    }
+  }
+
+  &__social-link {
+    width: 30px;
+    height: 31px;
+    padding: 5px;
+
+    svg {
+      width: 30px;
+      height: 31px;
+      fill: var(--text-color);
+    }
+  }
+
+  &__social-link--fb {
+  }
+
+  &__social-link--vk {
+  }
+
+  &__social-link--tw {
+  }
+}

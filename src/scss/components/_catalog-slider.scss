@@ -1,0 +1,140 @@
+.catalog-slider {
+  width: 100%;
+  height: 100%;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--slider-1);
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: inherit;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      padding-top: 100%;
+      z-index: -100;
+    }
+
+    &:nth-child(2) {
+      background-color: var(--slider-2);
+    }
+
+    &:nth-child(3) {
+      background-color: var(--slider-3);
+    }
+  }
+
+  &__content {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    overflow: hidden;
+    margin-top: 110px;
+    margin-bottom: 110px;
+    margin-left: 108px;
+    height: 100%;
+  }
+
+  &__title {
+    max-width: 30%;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  &__descr {
+    max-width: 30%;
+    font-size: 15px;
+    line-height: 2;
+    text-align: left;
+    color: var(--text-light-color);
+    margin-bottom: 37px;
+  }
+
+  &__btn-more,
+  &__btn-cart {
+    display: inline-block;
+    border: 1px solid var(--text-color);
+    padding: 18px 45px;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: var(--text-color);
+      transition: all 0.3s;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 108px;
+    bottom: 50%;
+    width: 40%;
+    max-height: 95%;
+    transform: translateY(50%);
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    @include bg-cover;
+
+    border: 2px solid var(--text-color);
+    width: 48px;
+    height: 48px;
+    transition: all 0.3s;
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--text-color);
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: var(--text-color);
+      transition: all 0.3s;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.swiper-button-next {
+}
+
+.swiper-button-prev {
+}
