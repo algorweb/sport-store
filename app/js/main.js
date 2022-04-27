@@ -11,6 +11,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hero_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/hero-swiper */ "./src/js/components/hero-swiper.js");
 /* harmony import */ var _components_hero_catalog_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hero-catalog-swiper */ "./src/js/components/hero-catalog-swiper.js");
+/* harmony import */ var _components_catalog_filter_toggle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/catalog-filter-toggle */ "./src/js/components/catalog-filter-toggle.js");
+/* harmony import */ var _components_catalog_props__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/catalog-props */ "./src/js/components/catalog-props.js");
+
+
 
 
 
@@ -108,7 +112,14 @@ __webpack_require__.r(__webpack_exports__);
   windowEl: window,
   documentEl: document,
   htmlEl: document.documentElement,
-  bodyEl: document.body
+  bodyEl: document.body,
+  $catalogFiltersTop: document.querySelectorAll('.catalog-filters__group'),
+  $hideFilters: document.querySelector('.catalog-filters__hide-content'),
+  $catalogColumns: document.querySelector('.catalog-columns__list'),
+  $catalogGridContent: document.querySelector('.catalog-grid__content'),
+  $catalogFilterItems: document.querySelectorAll('.catalog-filters__item'),
+  $catalogChoice: document.querySelector('.catalog-choice'),
+  $customSelect: document.querySelectorAll('.custom-select')
 });
 
 /***/ }),
@@ -127,6 +138,126 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/catalog-filter-toggle.js":
+/*!****************************************************!*\
+  !*** ./src/js/components/catalog-filter-toggle.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+ // if (document.querySelector('.page__catalog')) {
+
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFiltersTop.forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters--open');
+  });
+});
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$hideFilters.addEventListener('click', function (e) {
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFiltersTop.forEach(function (el) {
+    el.closest('.catalog-filters__group').classList.remove('catalog-filters--open');
+  });
+});
+
+var createChoiceItem = function createChoiceItem(text) {
+  return "\n      <button class=\"btn-reset catalog-choice__item\" data-choice-text=\"".concat(text, "\">\n        ").concat(text, "\n        <svg aria-hidden=\"true\">\n          <use xlink:href=\"img/sprite.svg#close\"></use>\n        </svg>\n      </button>\n    ");
+};
+
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFilterItems.forEach(function (el) {
+  el.querySelector('input').addEventListener('change', function (e) {
+    console.log(el.querySelector('input'));
+    var checked = el.querySelector('input').checked;
+
+    if (checked) {
+      el.querySelector('.custom-checkbox').classList.add('custom-checkbox--active');
+      var text = el.querySelector('.custom-checkbox__text').textContent;
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogChoice.insertAdjacentHTML('afterbegin', createChoiceItem(text));
+    } else {
+      el.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
+      var _text = el.querySelector('.custom-checkbox').dataset.text;
+      document.querySelector("[data-choice-text=\"".concat(_text, "\"]")).remove();
+    }
+
+    el.closest('.catalog-filters').querySelector('.catalog-filters__quantity').textContent = el.closest('.catalog-filters__items').querySelectorAll('.custom-checkbox--active').length;
+    var activeCheckboxes = document.querySelectorAll('.custom-checkbox--active');
+
+    if (activeCheckboxes.length > 0) {
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogChoice.style.display = 'block';
+    } else {
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogChoice.style.display = 'none';
+    }
+  });
+});
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogChoice.addEventListener('click', function (e) {
+  if (e.target.classList.contains('catalog-choice__item')) {
+    e.target.remove();
+    var text = e.target.textContent.trimLeft().trimRight();
+    document.querySelector("[data-text=\"".concat(text, "\"]")).querySelector('input').checked = false;
+    document.querySelector("[data-text=\"".concat(text, "\"]")).classList.remove('custom-checkbox--active');
+  }
+
+  if (e.target.classList.contains('catalog-choice__clear')) {
+    Array.from(e.currentTarget.children).forEach(function (el) {
+      if (!el.classList.contains('catalog-choice__clear')) {
+        el.remove();
+      }
+
+      document.querySelectorAll('.catalog-filter__quantity').forEach(function (el) {
+        return el.textContent = 0;
+      });
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFilterItems.forEach(function (el) {
+        el.querySelector('input').checked = false;
+        el.querySelector('.custom-checkbox').classList.remove('custom-checkbox--active');
+      });
+    });
+    e.currentTarget.style.display = 'none';
+  }
+
+  if (e.currentTarget.children.length === 1) {
+    e.currentTarget.style.display = 'none';
+  }
+}); // }
+
+/***/ }),
+
+/***/ "./src/js/components/catalog-props.js":
+/*!********************************************!*\
+  !*** ./src/js/components/catalog-props.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogColumns.addEventListener('click', function (e) {
+  if (e.target.classList.contains('.catalog-columns__btn') || e.target.closest('.catalog-columns__item')) {
+    var columns = e.target.dataset.columns;
+    var $columnsBtn = document.querySelectorAll('.catalog-columns__btn');
+    $columnsBtn.forEach(function (el) {
+      el.classList.remove('catalog-columns__btn--current');
+    });
+    e.target.classList.add('catalog-columns__btn--current');
+    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogGridContent.dataset.gridColumns = columns;
+  }
+});
+
+if (_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$customSelect) {
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$customSelect.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.currentTarget.classList.toggle('custom-select--open');
+
+      if (e.target.classList.contains('custom-select__item')) {
+        var text = e.target.textContent;
+        e.currentTarget.querySelector('.custom-select__top').textContent = text;
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/components/hero-catalog-swiper.js":
 /*!**************************************************!*\
   !*** ./src/js/components/hero-catalog-swiper.js ***!
@@ -142,7 +273,6 @@ __webpack_require__.r(__webpack_exports__);
 var swiperCatalog = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())(".catalog-slider__container", {
   slidesPerView: 1,
   speed: 700,
-  mousewheel: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -166,7 +296,6 @@ __webpack_require__.r(__webpack_exports__);
 var swiperHero = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())('.hero__swiper', {
   slidesPerView: 1,
   speed: 700,
-  mousewheel: true,
   pagination: {
     el: ".slider-pagination",
     clickable: true,

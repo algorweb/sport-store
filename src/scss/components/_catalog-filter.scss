@@ -1,0 +1,168 @@
+.catalog__filter-grid {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.catalog-filters {
+  margin-right: 30px;
+  padding-top: 27px;
+  padding-right: 62px;
+  width: 309px;
+
+  &__hide-content {
+    margin-bottom: 18px;
+    padding-left: 24px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: left;
+    text-transform: uppercase;
+    background-image: url("../img/hide.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  &__group {
+    border-top: 1px solid #eee;
+    width: 309px;
+
+    &:last-child {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  &__quantity {
+    margin-left: 5px;
+    min-width: 16px;
+    transform: translateY(-1px);
+  }
+
+  &__toggle {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    color: #aaa;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: currentcolor;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: currentcolor;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__bottom {
+    display: none;
+    padding-bottom: 34px;
+  }
+
+  &__items {
+    columns: 2;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &--open {
+    .catalog-filters__bottom {
+      display: block;
+    }
+
+    .catalog-filters__toggle {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    &:checked + span {
+      color: var(--text-color);
+
+      &::before {
+        border-color: var(--text-color);
+      }
+
+      &::after {
+        content: "\2713";
+        position: absolute;
+        left: 2px;
+        top: 0;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 15px;
+    font-size: 13px;
+    color: var(--text-gray);
+    transition: color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      border: 2px solid #aaa;
+      width: 11px;
+      height: 11px;
+    }
+
+    &:hover {
+      color: var(--text-color);
+      transition: color 0.3s;
+
+      &::before {
+        border-color: var(--text-color);
+        transition: color 0.3s;
+      }
+    }
+  }
+}

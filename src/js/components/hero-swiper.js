@@ -4,7 +4,6 @@ import Swiper, { Navigation, Pagination } from '../vendor/swiper.js';
 const swiperHero = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   speed: 700,
-  mousewheel: true,
   pagination: {
     el: ".slider-pagination",
     clickable: true,

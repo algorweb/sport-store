@@ -27,7 +27,8 @@
   }
 }
 
-.page--catalog header {
+.page__catalog header,
+.page__card header{
   position: relative;
 }
 

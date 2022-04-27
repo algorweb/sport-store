@@ -221,3 +221,15 @@ a:hover svg {
   line-height: 1.2;
   color: var(--text-light-color);
 }
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 25px;
+  padding: 0 5px;
+  height: 16px;
+  font-weight: 700;
+  font-size: 10px;
+  color: #fff;
+  background-color: var(--text-color);
+}

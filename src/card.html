@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body page__card">
+  <h1 class="visually-hidden">Интернет-магазин спортивный товаров Sport-Ritm.</h1>
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/breadcrumbs.html')
+      <section class="card">
+        <h2 class="visually-hidden">Карточка товара</h2>
+        @include('partials/card-top.html')
+      </section>
+    </main>
+
+    @include('partials/footer-catalog.html')
+  </div>
+</body>
+
+</html>
