@@ -5,6 +5,6 @@ import './components/catalog-props';
 import './components/card-select';
 import './components/stepper';
 import './components/card-slider';
-import './components/simplebar';
-// import './components/card-bottom-tabs';
+import './components/card-simplebar';
+import './components/card-bottom-tabs';
 

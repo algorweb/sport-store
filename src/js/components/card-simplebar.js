@@ -1,6 +1,7 @@
 // Подключение плагина кастом-скролла
-import 'simplebar';
+import vars from '../_vars';
+import SimpleBar from 'simplebar';
 
-if (document.querySelector('[data-bar]')) {
+if (document.querySelector('[data-simplebar]')) {
   new SimpleBar(document.querySelector('.card-description__navigation'));
 }

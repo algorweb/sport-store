@@ -960,7 +960,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_card_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/card-select */ "./src/js/components/card-select.js");
 /* harmony import */ var _components_stepper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/stepper */ "./src/js/components/stepper.js");
 /* harmony import */ var _components_card_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/card-slider */ "./src/js/components/card-slider.js");
-/* harmony import */ var _components_simplebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/simplebar */ "./src/js/components/simplebar.js");
+/* harmony import */ var _components_card_simplebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/card-simplebar */ "./src/js/components/card-simplebar.js");
+/* harmony import */ var _components_card_bottom_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/card-bottom-tabs */ "./src/js/components/card-bottom-tabs.js");
 
 
 
@@ -968,7 +969,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import './components/card-bottom-tabs';
+
+
 
 /***/ }),
 
@@ -1105,6 +1107,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/card-bottom-tabs.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/card-bottom-tabs.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+
+_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$cardDescrLink.forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    var target = e.currentTarget.getAttribute('href');
+    console.log(target);
+    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$cardDescrLink.forEach(function (el) {
+      return el.classList.remove('card-description__link--active');
+    });
+    document.querySelectorAll('.card-description__content').forEach(function (el) {
+      return el.classList.remove('card-description__content--active');
+    });
+    e.currentTarget.classList.add('card-description__link--active');
+    document.querySelector("[data-target=\"".concat(target, "\"]")).classList.add('card-description__content--active');
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/card-select.js":
 /*!******************************************!*\
   !*** ./src/js/components/card-select.js ***!
@@ -1164,6 +1194,26 @@ if (_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$sizeSelect) {
       size = '';
     }
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/card-simplebar.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/card-simplebar.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
+// Подключение плагина кастом-скролла
+
+
+
+if (document.querySelector('[data-simplebar]')) {
+  new simplebar__WEBPACK_IMPORTED_MODULE_1__["default"](document.querySelector('.card-description__navigation'));
 }
 
 /***/ }),
@@ -1389,24 +1439,6 @@ var swiperHero = new (_vendor_swiper_js__WEBPACK_IMPORTED_MODULE_0___default())(
     type: 'bullets'
   }
 });
-
-/***/ }),
-
-/***/ "./src/js/components/simplebar.js":
-/*!****************************************!*\
-  !*** ./src/js/components/simplebar.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
-// Подключение плагина кастом-скролла
-
-
-if (document.querySelector('[data-bar]')) {
-  new SimpleBar(document.querySelector('.card-description__navigation'));
-}
 
 /***/ }),
 
