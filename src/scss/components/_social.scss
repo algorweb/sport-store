@@ -1,0 +1,37 @@
+.social {
+  display: flex;
+
+  &__item {
+    width: 30px;
+    height: 31px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover a svg {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__link {
+    width: 30px;
+    height: 31px;
+    padding: 5px;
+
+    svg {
+      width: 30px;
+      height: 31px;
+      fill: var(--text-color);
+    }
+  }
+
+  &__link--fb {
+  }
+
+  &__link--vk {
+  }
+
+  &__link--tw {
+  }
+}

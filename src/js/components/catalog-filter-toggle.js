@@ -1,6 +1,6 @@
 import vars from '../_vars';
 
-// if (document.querySelector('.page__catalog')) {
+if (document.querySelector('.page__catalog')) {
   vars.$catalogFiltersTop.forEach(el => {
     el.addEventListener('click', (e) => {
       e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters--open');
@@ -91,4 +91,4 @@ import vars from '../_vars';
     }
 
   });
-// }
+}

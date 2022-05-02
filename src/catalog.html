@@ -3,7 +3,7 @@
 
 @include('partials/head.html')
 
-<body class="page__body  page__catalog">
+<body class="page__body page__catalog">
   <h1 class="visually-hidden">Интернет-магазин спортивный товаров Sport-Ritm.</h1>
   <div class="site-container">
     @include('partials/header.html')
@@ -11,7 +11,9 @@
       @include('partials/catalog-slider.html')
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        @include('partials/breadcrumbs.html')
+        <div class="catalog__breadcrumbs container-fluid">
+          @include('partials/breadcrumbs.html')
+        </div>
         <div class="catalog-content">
           <div class="container-fluid catalog__filter-grid">
             @include('partials/catalog-filter.html')

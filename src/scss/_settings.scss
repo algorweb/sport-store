@@ -166,12 +166,12 @@ h3 {
 
   &:active,
   &--current {
-    color: var(--accent-dark-color);
+    color: var(--accent-color);
     transition: width 0.3s;
 
     &::after {
       width: 100%;
-      background-color: var(--accent-dark-color);
+      background-color: var(--accent-color);
       transition: width 0.3s;
     }
   }
@@ -182,18 +182,14 @@ h3 {
 }
 
 .primary-small-link {
-  transition: all 0.3s;
+  transition: color 0.3s;
 
   &:focus,
-  &:hover {
-    color: var(--accent-color);
-    transition: all 0.3s;
-  }
-
+  &:hover,
   &:active,
   &--current {
-    color: var(--accent-dark-color);
-    transition: all 0.3s;
+    color: var(--accent-color);
+    transition: color 0.3s;
   }
 }
 

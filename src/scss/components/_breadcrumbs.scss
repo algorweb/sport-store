@@ -1,13 +1,7 @@
 .breadcrumbs {
-  &__container {
-  }
-
   &__list {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #eee;
-    padding-top: 36px;
-    padding-bottom: 26px;
   }
 
   &__item {

@@ -4,17 +4,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
-  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <title>Интернет-магазин спортивный товаров Sport-Ritm.</title>
+
+  <meta name="description" content="Интернет-магазин по продаже кроссовок, спортивной одежды и формы, мячей, фитнес принадлежностей и других снарядов.">
+  <meta name="keywords" content="Кроссовки, форма, мячи, настольный теннис, фитнес">
+  <meta name="author" content="Команда Sport-Ritm">
+  <meta name="image" content="./img/logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Интернет-магазин спортивный товаров Sport-Ritm.">
+  <meta property="og:description" content="Интернет-магазин по продаже кроссовок, спортивной одежды и формы, мячей, фитнес принадлежностей и других снарядов.">
+  <meta property="og:image" content="./img/logo.png">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Jost-mf-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Jost-mf-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Jost-mf-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Jost-mf-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <meta name="apple-mobile-web-app-title" content="Интернет-магазин спортивный товаров Sport-Ritm.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
 </head>
 
-<body class="page__body  page__catalog">
+<body class="page__body page__catalog">
   <h1 class="visually-hidden">Интернет-магазин спортивный товаров Sport-Ritm.</h1>
   <div class="site-container">
     <header class="header header--catalog">
@@ -128,16 +166,17 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <div class="breadcrumbs">
-  <div class="breadcrumbs__container container-fluid">
-    <ul class="breadcrumbs__list list-reset">
-      <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Главная</a></li>
-      <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Магазин</a></li>
-      <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current primary-small-link">Новое поступление</a></li>
-    </ul>
-  </div>
+        <div class="catalog__breadcrumbs container-fluid">
+          <div class="breadcrumbs">
+  <ul class="breadcrumbs__list list-reset">
+    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Главная</a></li>
+    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Магазин</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current primary-small-link">Новое
+        поступление</a></li>
+  </ul>
 </div>
 
+        </div>
         <div class="catalog-content">
           <div class="container-fluid catalog__filter-grid">
             <aside class="catalog-filters">
@@ -611,25 +650,25 @@
     <footer class="footer footer--catalog">
   <div class="container">
     <div class="footer__top">
-      <ul class="footer__social list-reset" title="Наши социальные странички">
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link footer__social-link--fb"
+      <ul class="footer__social social list-reset" title="Наши социальные странички">
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--fb"
             aria-label="Наша страничка в Фейсбуке">
             <svg class="">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </a>
         </li>
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link footer__social-link--vk"
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--vk"
             aria-label="Наша страничка во Вконтакте">
             <svg class="">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
-        <li class="footer__social-item">
-          <a href="#" target="_blank" class="footer__social-link footer__social-link--inst"
+        <li class="social__item">
+          <a href="#" target="_blank" class="social__link social__link--inst"
             aria-label="Наша страничка в Инстаграм">
             <svg class="">
               <use xlink:href="img/sprite.svg#instagram"></use>
@@ -638,12 +677,12 @@
         </li>
       </ul>
       <ul class="footer__menu footer__menu--flex list-reset">
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-link">Доставка и
+        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Доставка и
             самовывоз</a></li>
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-link">Оплата</a>
+        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Оплата</a>
         </li>
         <li class="footer__menu-item footer__menu-item--flex"><a href="#"
-            class="footer__menu-link primary-link">Возврат-обмен</a></li>
+            class="footer__menu-link primary-small-link">Возврат-обмен</a></li>
       </ul>
       <div class="footer__currency-lang">
         <div class="footer__currency">

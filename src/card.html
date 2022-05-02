@@ -8,10 +8,13 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      @include('partials/breadcrumbs.html')
       <section class="card">
         <h2 class="visually-hidden">Карточка товара</h2>
+        <div class="card__breadcrumbs container-fluid">
+          @include('partials/breadcrumbs.html')
+        </div>
         @include('partials/card-top.html')
+        @include('partials/card-bottom.html')
       </section>
     </main>
 
