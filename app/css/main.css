@@ -224,7 +224,15 @@ h3 {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-.primary-link:focus::after, .primary-link:hover::after {
+.primary-link:focus::after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.primary-link:hover::after {
   left: 0;
   right: auto;
   width: 100%;
@@ -306,13 +314,14 @@ a:hover svg {
   font-weight: 700;
   font-size: 10px;
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
 }
 
 .to-top {
   position: fixed;
   right: 2%;
   bottom: 5%;
+  z-index: 100;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -322,11 +331,11 @@ a:hover svg {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  border: 1px solid var(--accent-color);
   padding: 14px 18px;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--accent-color);
-  background-color: var(--light-color);
+  background-color: transparent;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   -o-transition: transform 0.3s;
@@ -343,9 +352,9 @@ a:hover svg {
 }
 .to-top:hover {
   background-color: var(--accent-color);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
   -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
   transition: background-color 0.3s, -webkit-transform 0.3s;
   -o-transition: transform 0.3s, background-color 0.3s;
@@ -540,31 +549,43 @@ a:hover svg {
 .slider-pagination .swiper-pagination-bullet {
   position: relative;
   bottom: 10px;
+  border: none;
+  border-radius: 50%;
   width: 6px;
   height: 6px;
-  background-color: #ececeb;
-  opacity: 1;
+  background-color: var(--text-color);
 }
-.slider-pagination .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 15px;
-}
-.slider-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-.slider-pagination .swiper-pagination-bullet-active::before {
+.slider-pagination .swiper-pagination-bullet::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
-  z-index: -1;
+  z-index: 1;
+  display: block;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: #fff;
-  opacity: 1;
+  background-color: transparent;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.slider-pagination .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 15px;
+}
+.slider-pagination .swiper-pagination-bullet:hover {
+  -webkit-box-shadow: 0 0 0 7px var(--accent-color);
+  box-shadow: 0 0 0 7px var(--accent-color);
+  opacity: 1;
+}
+.slider-pagination .swiper-pagination-bullet-active {
+  -webkit-box-shadow: 0 0 0 7px #fff;
+  box-shadow: 0 0 0 7px #fff;
+  background-color: var(--accent-color);
+}
+.slider-pagination .swiper-pagination-bullet-active:hover {
+  -webkit-box-shadow: 0 0 0 7px #fff;
+  box-shadow: 0 0 0 7px #fff;
 }
 
 .banners__wrap {
@@ -981,8 +1002,9 @@ a:hover svg {
   margin-right: 15px;
 }
 .catalog-slider__btn-more:hover, .catalog-slider__btn-cart:hover {
+  border-color: var(--accent-color);
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -1017,8 +1039,9 @@ a:hover svg {
   fill: var(--text-color);
 }
 .catalog-slider__btn-prev:hover, .catalog-slider__btn-next:hover {
+  border-color: var(--accent-color);
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -1068,13 +1091,19 @@ a:hover svg {
   transition: color 0.3s;
 }
 .breadcrumbs__link:hover {
-  color: var(--text-gray);
+  color: var(--accent-color);
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 .breadcrumbs__link--current {
   color: var(--text-color);
+}
+.breadcrumbs__link--current:hover {
+  color: var(--text-color);
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .catalog__filter-grid {
@@ -1091,16 +1120,43 @@ a:hover svg {
   width: 309px;
 }
 .catalog-filters__hide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 18px;
   padding-left: 24px;
   font-weight: 700;
   font-size: 10px;
-  line-height: 1.6;
+  line-height: 10px;
   text-align: left;
   text-transform: uppercase;
-  background-image: url("../img/hide.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.catalog-filters__hide-content svg {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  fill: var(--text-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.catalog-filters__hide-content:hover, .catalog-filters__hide-content:focus, .catalog-filters__hide-content:active {
+  color: var(--accent-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.catalog-filters__hide-content:hover svg, .catalog-filters__hide-content:focus svg, .catalog-filters__hide-content:active svg {
+  fill: var(--accent-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .catalog-filters__group {
   border-top: 1px solid #eee;
@@ -1207,17 +1263,17 @@ a:hover svg {
   user-select: none;
 }
 .custom-checkbox__input:checked + span {
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 .custom-checkbox__input:checked + span::before {
-  border-color: var(--text-color);
+  border-color: var(--accent-color);
 }
 .custom-checkbox__input:checked + span::after {
   content: "✓";
   position: absolute;
   left: 2px;
   top: 0;
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 .custom-checkbox__text {
   position: relative;
@@ -1238,13 +1294,13 @@ a:hover svg {
   height: 11px;
 }
 .custom-checkbox__text:hover {
-  color: var(--text-color);
+  color: var(--accent-color);
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 .custom-checkbox__text:hover::before {
-  border-color: var(--text-color);
+  border-color: var(--accent-color);
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
@@ -1339,20 +1395,20 @@ a:hover svg {
   color: var(--text-gray);
 }
 .catalog-columns__btn:hover {
-  color: var(--text-color);
+  color: var(--accent-color);
   -webkit-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
 .catalog-columns__btn--current {
-  color: var(--text-color);
+  color: var(--accent-color);
   -webkit-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
 .catalog-columns__btn--current::after {
   width: 100%;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   -webkit-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s;
@@ -1383,7 +1439,7 @@ a:hover svg {
 }
 .catalog-choice__item:hover {
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
   -webkit-transition: background-color 0.3s, color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
@@ -1393,6 +1449,10 @@ a:hover svg {
 }
 .catalog-choice__clear {
   position: relative;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  padding: 5px 12px;
   font-weight: 500;
   font-size: 13px;
 }
@@ -1408,6 +1468,16 @@ a:hover svg {
   -webkit-transition: opacity 0.15s;
   -o-transition: opacity 0.15s;
   transition: opacity 0.15s;
+}
+.catalog-choice__clear:hover {
+  color: #fff;
+  background-color: var(--accent-color);
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.catalog-choice__clear:hover svg {
+  fill: #fff;
 }
 
 .pagination {

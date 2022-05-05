@@ -76,31 +76,42 @@
   .swiper-pagination-bullet {
     position: relative;
     bottom: 10px;
+    border: none;
+    border-radius: 50%;
     width: 6px;
     height: 6px;
-    background-color: #ececeb;
-    opacity: 1;
-
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
 
     &::before {
       content: "";
       position: absolute;
       left: 50%;
       top: 50%;
-      z-index: -1;
+      z-index: 1;
+      display: block;
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      background-color: #fff;
-      opacity: 1;
+      background-color: transparent;
       transform: translate(-50%, -50%);
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 7px var(--accent-color);
+      opacity: 1;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    box-shadow: 0 0 0 7px #fff;
+    background-color: var(--accent-color);
+
+    &:hover {
+      box-shadow: 0 0 0 7px #fff;
     }
   }
 }

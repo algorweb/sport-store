@@ -87,8 +87,9 @@
     }
 
     &:hover {
+      border-color: var(--accent-color);
       color: #fff;
-      background-color: var(--text-color);
+      background-color: var(--accent-color);
       transition: all 0.3s;
     }
   }
@@ -122,8 +123,9 @@
     }
 
     &:hover {
+      border-color: var(--accent-color);
       color: #fff;
-      background-color: var(--text-color);
+      background-color: var(--accent-color);
       transition: all 0.3s;
 
       svg {

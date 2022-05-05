@@ -156,7 +156,13 @@ h3 {
     }
   }
 
-  &:focus::after,
+  &:focus::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+    transition: width 0.3s;
+  }
+
   &:hover::after {
     left: 0;
     right: auto;
@@ -227,21 +233,22 @@ a:hover svg {
   font-weight: 700;
   font-size: 10px;
   color: #fff;
-  background-color: var(--text-color);
+  background-color: var(--accent-color);
 }
 
 .to-top {
   position: fixed;
   right: 2%;
   bottom: 5%;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--accent-color);
   padding: 14px 18px;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--accent-color);
-  background-color: var(--light-color);
+  background-color: transparent;
   transition: transform 0.3s;
 
   svg {
@@ -253,7 +260,7 @@ a:hover svg {
 
   &:hover {
     background-color: var(--accent-color);
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: transform 0.3s, background-color 0.3s;
 
     svg {

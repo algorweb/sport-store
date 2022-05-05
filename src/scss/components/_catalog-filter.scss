@@ -10,16 +10,36 @@
   width: 309px;
 
   &__hide-content {
+    display: flex;
+    align-items: center;
     margin-bottom: 18px;
     padding-left: 24px;
     font-weight: 700;
     font-size: 10px;
-    line-height: 1.6;
+    line-height: 10px;
     text-align: left;
     text-transform: uppercase;
-    background-image: url("../img/hide.svg");
-    background-position: left center;
-    background-repeat: no-repeat;
+    transition: all 0.3s;
+
+    svg {
+      margin-right: 5px;
+      width: 16px;
+      height: 16px;
+      fill: var(--text-color);
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--accent-color);
+      transition: all 0.3s;
+
+      svg {
+        fill: var(--accent-color);
+        transition: all 0.3s;
+      }
+    }
   }
 
   &__group {
@@ -122,10 +142,10 @@
 
   &__input {
     &:checked + span {
-      color: var(--text-color);
+      color: var(--accent-color);
 
       &::before {
-        border-color: var(--text-color);
+        border-color: var(--accent-color);
       }
 
       &::after {
@@ -133,7 +153,7 @@
         position: absolute;
         left: 2px;
         top: 0;
-        color: var(--text-color);
+        color: var(--accent-color);
       }
     }
   }
@@ -156,11 +176,11 @@
     }
 
     &:hover {
-      color: var(--text-color);
+      color: var(--accent-color);
       transition: color 0.3s;
 
       &::before {
-        border-color: var(--text-color);
+        border-color: var(--accent-color);
         transition: color 0.3s;
       }
     }

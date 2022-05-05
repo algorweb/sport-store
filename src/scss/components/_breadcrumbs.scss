@@ -30,12 +30,17 @@
     transition: color 0.3s;
 
     &:hover {
-      color: var(--text-gray);
+      color: var(--accent-color);
       transition: color 0.3s;
     }
 
     &--current {
       color: var(--text-color);
+
+      &:hover {
+        color: var(--text-color);
+        transition: color 0.3s;
+      }
     }
   }
 }
