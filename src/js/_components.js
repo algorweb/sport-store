@@ -7,4 +7,5 @@ import './components/stepper';
 import './components/card-slider';
 import './components/card-simplebar';
 import './components/card-bottom-tabs';
+import './components/scroll-to-top';
 

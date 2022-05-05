@@ -229,3 +229,36 @@ a:hover svg {
   color: #fff;
   background-color: var(--text-color);
 }
+
+.to-top {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--light-color);
+  transition: transform 0.3s;
+
+  svg {
+    width: 10px;
+    height: 18px;
+    fill: var(--accent-color);
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+    transition: transform 0.3s, background-color 0.3s;
+
+    svg {
+      fill: var(--light-color);
+      transition: fill 0.3s;
+    }
+  }
+}
