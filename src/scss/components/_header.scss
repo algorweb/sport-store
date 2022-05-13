@@ -7,28 +7,51 @@
   background-color: transparent;
 
   &__container {
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 19px;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__burger {
+    @include mobile {
+      order: 2;
+    }
   }
 
   &__logo-lnk {
     cursor: pointer;
+
+    @include mobile {
+      order: 1;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__shop-nav {
     margin-left: 240px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+
+    @include mobile {
+      order: 3;
+    }
   }
 }
 
 .page__catalog header,
-.page__card header{
+.page__card header {
   position: relative;
 }
 
@@ -37,12 +60,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      display: block;
+      justify-content: flex-start;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 45px;
+
+      @include tablet {
+        margin-right: 0;
+      }
     }
+  }
+
+  &__link {
+    @include tablet {
+      display: inline-block;
+      border-bottom: 1px solid #bfbfbf;
+      padding: 10px 10%;
+      width: 100%;
+      font-size: 19px;
+    }
+  }
+
+  &__close {
+    display: none;
+
+    @include tablet {
+      @include bg-cover;
+
+      position: absolute;
+      right: 4%;
+      top: 4%;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/close.svg");
+    }
+  }
+
+  &--visible {
+    left: 0;
+    transition: left 0.3s;
+  }
+
+  @include tablet {
+    position: fixed;
+    left: -150vw;
+    top: 0;
+    padding: 55px 0;
+    width: 33%;
+    height: 100vh;
+    background-color: #fff;
+    transition: left 0.3s;
+
+    &--visible {
+      left: 0;
+      transition: left 0.3s;
+    }
+  }
+
+  @include small-tablet {
+    width: 50%;
+  }
+
+  @include mobile {
+    width: 80%;
   }
 }
 
@@ -59,6 +146,10 @@
 
     &:not(:last-child) {
       margin-right: 5px;
+
+      @include mobile {
+        margin-right: 5px;
+      }
     }
   }
 
@@ -66,12 +157,20 @@
     padding: 15px;
     width: 16px;
     height: 16px;
+
+    @include mobile {
+      padding: 5px;
+    }
   }
 }
 
 .search-form {
   &__btn {
     padding: 15px;
+
+    @include mobile {
+      padding: 5px;
+    }
   }
 }
 
@@ -83,15 +182,48 @@
     transition: 0.3s;
   }
 
-  // &__quantity {
-  // }
+  @include mobile {
+    padding: 5px;
+  }
 }
 
-.menu {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+.burger {
+  position: relative;
+  display: none;
+  width: 25px;
+  height: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transform: translateY(-50%);
+  }
+
+  @include tablet {
+    display: block;
   }
 }

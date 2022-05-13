@@ -46,8 +46,8 @@ if (document.querySelector('.page__catalog')) {
         document.querySelector(`[data-choice-text="${text}"]`).remove();
       }
 
-      el.closest('.catalog-filters').querySelector('.catalog-filters__quantity').textContent = el.closest('.catalog-filters__items').querySelectorAll('.custom-checkbox--active').length;
-
+      el.closest('.catalog-filters__group').querySelector('.catalog-filters__quantity').textContent = el.closest('.catalog-filters__items').querySelectorAll('.custom-checkbox--active').length;
+      console
       let activeCheckboxes = document.querySelectorAll('.custom-checkbox--active');
 
       if (activeCheckboxes.length > 0) {
@@ -75,7 +75,7 @@ if (document.querySelector('.page__catalog')) {
           el.remove();
         }
 
-        document.querySelectorAll('.catalog-filter__quantity').forEach(el => el.textContent = 0);
+        document.querySelectorAll('.catalog-filters__quantity').forEach(el => el.textContent = 0);
 
         vars.$catalogFilterItems.forEach(el => {
           el.querySelector('input').checked = false;

@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 80px;
+
+    @include big-desktop {
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
@@ -17,6 +21,18 @@
     padding: 60px 300px 60px 60px;
     width: 33%;
     background-color: var(--bg-color);
+
+    @include big-desktop {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   &__title {

@@ -1,8 +1,16 @@
 .shop-banners {
   margin-bottom: 60px;
 
+  @include mobile {
+    margin-bottom: 25px;;
+  }
+
   &__list {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -21,6 +29,12 @@
       right: 0;
       bottom: 0;
       z-index: 1;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      padding: 20% 0;
+      width: 100%;
     }
   }
 
@@ -48,6 +62,14 @@
     color: #fff;
     line-height: 1.2;
     text-align: center;
+
+    @include tablet {
+      font-size: 33px;
+    }
+
+    @include mobile {
+      font-size: 25px;
+    }
   }
 
   &__link {
