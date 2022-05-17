@@ -25,7 +25,7 @@
     padding-top: 100px;
     padding-bottom: 30px;
     width: 100%;
-    height: calc(100% - 100px);
+    height: calc(100% - 130px);
     max-width: 100%;
     background-color: var(--slider-1);
 
@@ -37,7 +37,7 @@
       background-color: var(--slider-3);
     }
 
-    @include small-tablet {
+    @include tablet {
       padding-top: 50px;
       height: calc(100% - 50px);
     }
@@ -52,12 +52,14 @@
     overflow: hidden;
     height: 100%;
 
-    @include small-tablet {
+    @include tablet {
       align-items: center;
+      text-align: center;
     }
   }
 
   &__title {
+    overflow: hidden;
     margin: 0;
     margin-bottom: 40px;
     max-width: 48%;
@@ -72,23 +74,30 @@
       font-size: 30px;
     }
 
-    @include small-tablet {
+    @include tablet {
       order: 2;
       margin-bottom: 20px;
       max-width: 90%;
+      max-height: 20%;
       font-style: 50px;
     }
   }
 
   &__descr {
+    overflow: hidden;
     margin: 0;
     max-width: 48%;
     font-size: 18px;
 
-    @include small-tablet {
+    @include tablet {
       order: 3;
       max-width: 90%;
+      max-height: 20%;
     }
+  }
+
+  &__picture {
+    object-fit: cover;
   }
 
   &__img {
@@ -104,16 +113,21 @@
       width: 35%;
     }
 
-    @include small-tablet {
+    @include tablet {
       position: relative;
       right: auto;
-      top: 0;
+      top: 5%;
       bottom: auto;
       order: 1;
-      margin-bottom: 15px;
-      width: 50%;
-      max-height: 70%;
+      width: 75%;
+      max-height: 100%;
       transform: translateY(0);
+    }
+
+    @include mobile {
+      margin-bottom: 10%;
+      width: 100%;
+      max-height: 100%;
     }
   }
 }
