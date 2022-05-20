@@ -5,6 +5,14 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 70px;
+
+    @include desktop {
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -23,6 +31,12 @@
     &:nth-last-child(-n + 3) {
       margin-bottom: 0;
     }
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 50px;
+      width: 47%;
+    }
   }
 }
 
@@ -37,6 +51,12 @@
     &:nth-last-child(-n + 4) {
       margin-bottom: 0;
     }
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 50px;
+      width: 47%;
+    }
   }
 }
 
@@ -50,6 +70,12 @@
 
     &:nth-last-child(-n + 5) {
       margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 50px;
+      width: 47%;
     }
   }
 }
@@ -105,6 +131,10 @@
         transition: width 0.3s;
       }
     }
+  }
+
+  @include desktop {
+    display: none;
   }
 }
 

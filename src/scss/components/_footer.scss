@@ -89,14 +89,8 @@
     padding-bottom: 15px;
   }
 
-  &__form-label {
-  }
-
   &__form-input {
     outline: none;
-  }
-
-  &__form-btn {
   }
 
   &__bottom {
@@ -106,13 +100,13 @@
     padding-top: 25px;
     padding-bottom: 25px;
 
+    .footer__menu {
+      margin-bottom: 25px;
+    }
+
     @include mobile {
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .footer__menu {
-      margin-bottom: 25px;
     }
   }
 
@@ -167,6 +161,48 @@
     .footer__bottom {
       padding-top: 20px;
       padding-bottom: 0;
+    }
+
+    @include desktop {
+      .footer__social {
+        order: 1;
+      }
+
+      .footer__menu {
+        justify-content: center;
+        order: 3;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .footer__currency-lang {
+        order: 2;
+      }
+    }
+
+    @include small-tablet {
+      .footer__top {
+        flex-direction: column;
+      }
+
+      .footer__social {
+        margin-bottom: 30px;
+      }
+
+      .footer__bottom {
+        flex-wrap: wrap;
+
+        picture {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .footer__copyright {
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }

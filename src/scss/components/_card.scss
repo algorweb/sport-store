@@ -10,22 +10,41 @@
 
   &__bottom {
     padding-top: 70px;
+
+    @include small-tablet {
+      padding-top: 30px;
+    }
   }
 }
 
 .card-top {
   &__container {
     display: flex;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__left {
     margin-right: 4%;
     width: 48%;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 100%;
+    }
   }
 
   &__right {
     padding-left: 4%;
     width: calc(100% - 52%);
+
+    @include small-tablet {
+      padding-left: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -69,6 +88,10 @@
 
   &__second-select {
     margin-bottom: 82px;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__stepper {
@@ -324,10 +347,17 @@
     color: var(--text-gray);
   }
 
+  &__item {
+    @include small-tablet {
+      margin-bottom: 15px;
+    }
+  }
+
   &__social {
     display: flex;
     align-items: center;
     margin-top: 15px;
+    width: 100%;
 
     span {
       margin-right: 13px;
@@ -342,6 +372,14 @@
   &__left {
     padding-top: 30px;
     width: 16%;
+
+    @include small-tablet {
+      width: 33%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   .simplebar-track.simplebar-vertical {
@@ -364,10 +402,21 @@
     padding-right: 120px;
     padding-left: 125px;
     width: 84%;
+
+    @include small-tablet {
+      padding-right: 40px;
+      padding-left: 60px;
+      width: 84%;
+    }
+
+    @include mobile {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   &__navigation {
-    // overflow: auto;
     padding: 23px 0;
     width: 100%;
     max-height: 210px;
@@ -410,5 +459,9 @@
     &--active {
       display: block;
     }
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
   }
 }

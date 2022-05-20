@@ -1,6 +1,27 @@
 .catalog__filter-grid {
+  position: relative;
   display: flex;
   margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog-mobile-filters {
+  display: none;
+
+  @include tablet {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+      fill: var(--text-color);
+    }
+  }
 }
 
 .catalog-filters {
@@ -48,6 +69,14 @@
 
     &:last-child {
       border-bottom: 1px solid #eee;
+    }
+
+    @include desktop {
+      width: 250px;
+    }
+
+    @include tablet {
+      width: 100%;
     }
   }
 
@@ -132,6 +161,29 @@
         display: none;
       }
     }
+  }
+
+  @include desktop {
+    margin-right: 15px;
+    padding-right: 30px;
+    width: 250px;
+  }
+
+  @include tablet {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    z-index: 30;
+    display: none;
+    padding: 30px 40px;
+    width: 100%;
+    background: #fff;
+  }
+}
+
+.catalog-filters--open-btn {
+  @include tablet {
+    display: block;
   }
 }
 

@@ -10,3 +10,4 @@ import './components/card-simplebar';
 import './components/card-bottom-tabs';
 import './components/scroll-to-top';
 import './components/burger';
+import './components/mobile-filter';

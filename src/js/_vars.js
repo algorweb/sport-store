@@ -25,6 +25,6 @@ export default {
   $burger: document.querySelector('.burger'),
   $navClose: document.querySelector('.nav__close'),
   $nav: document.querySelector('.nav'),
-  // $mobileFiltersOpen: document.querySelector('.catalog-mobile-filters'),
-  // $catalogFilters: document.querySelector('.catalog-filters'),
+  $mobileFiltersOpen: document.querySelector('.catalog-mobile-filters'),
+  $catalogFilters: document.querySelector('.catalog-filters'),
 }
