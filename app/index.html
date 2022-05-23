@@ -63,9 +63,9 @@
       <nav class="nav header__nav" aria-label="Навигационное меню">
         <button class="nav__close btn-reset" type="button"></button>
         <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Магазины</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link primary-link--current">Акции</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Доставка и оплата</a></li>
         </ul>
       </nav>
       <a class="header__logo-lnk">
@@ -74,18 +74,19 @@
       <ul class="shop-nav header__shop-nav list-reset">
         <li class="shop-nav__item">
           <form action="#" class="shop-nav__search-form search-form">
-            <!-- <label class="search-form__label">
-              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Имя">
-            </label> -->
-            <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка поиска">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
+            <label class="search-form__label">
+              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Поиск...">
+            </label>
+            <button class="search__btn btn-reset" type="submit">Найти</button>
           </form>
+          <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка открытия поля поиска">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
         </li>
         <li class="shop-nav__item">
-          <a href="#" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
+          <a href="javascript:void(0);" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
             <svg class="">
               <use xlink:href="img/sprite.svg#user"></use>
             </svg>
@@ -163,7 +164,7 @@
       </picture>
       <div class="banners__wrap-info">
         <h3 class="banners__title">Женские волейбольные кроссовки</h3>
-        <a href="#" class="banners__link primary-link">Перейти</a>
+        <a href="javascript:void(0);" class="banners__link primary-link">Перейти</a>
       </div>
     </li>
     <li class="banners__item">
@@ -175,7 +176,7 @@
       </picture>
       <div class="banners__wrap-info">
         <h3 class="banners__title">Мужские беговые кроссовки</h3>
-        <a href="#" class="banners__link primary-link">Перейти</a>
+        <a href="javascript:void(0);" class="banners__link primary-link">Перейти</a>
       </div>
     </li>
     <li class="banners__item">
@@ -187,7 +188,7 @@
       </picture>
       <div class="banners__wrap-info">
         <h3 class="banners__title">Настольный теннис</h3>
-        <a href="#" class="banners__link primary-link">Перейти</a>
+        <a href="javascript:void(0);" class="banners__link primary-link">Перейти</a>
       </div>
     </li>
   </ul>
@@ -197,10 +198,12 @@
   <h2 class="visually-hidden">Подборка актуальных товаров из новинок, распродажи и топ продаж.</h2>
   <div class="main-products__grid-container container-fluid">
     <ul class="main-products__nav list-reset">
-      <li class="main-products__item"><button
-          class="main-products__btn btn-reset primary-link primary-link--current">Топ продаж</button></li>
-      <li class="main-products__item"><button class="main-products__btn btn-reset primary-link">Новинки</button></li>
-      <li class="main-products__item"><button class="main-products__btn btn-reset primary-link">Распродажа</button></li>
+      <li class="main-products__item"><button class="main-products__btn btn-reset primary-link primary-link--current"
+          type="button">Топ продаж</button></li>
+      <li class="main-products__item"><button class="main-products__btn btn-reset primary-link"
+          type="button">Новинки</button></li>
+      <li class="main-products__item"><button class="main-products__btn btn-reset primary-link"
+          type="button">Распродажа</button></li>
     </ul>
   </div>
   <div class="main-products__product-container">
@@ -224,7 +227,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -247,7 +255,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -270,7 +283,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -295,7 +313,12 @@
                 <span class="primary-product__oldprice">3000 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -318,7 +341,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -342,7 +370,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -366,7 +399,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -389,7 +427,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -412,7 +455,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -436,7 +484,12 @@
                 <span class="primary-product__price">2200 ₽</span>
               </div>
               <div class="primary-product__cart">
-                <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+                <button class="primary-product__to-cart btn-reset" type="button"
+                  aria-label="Кнопка добавить товар в корзину">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cart"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -464,7 +517,7 @@
       </picture>
       <div class="shop-banners__wrap-text">
         <h3 class="shop-banners__title">Мужская одежда</h3>
-        <a href="#" class="shop-banners__link primary-link">Перейти</a>
+        <a href="javascript:void(0);" class="shop-banners__link primary-link">Перейти</a>
       </div>
     </li>
     <li class="shop-banners__item">
@@ -475,7 +528,7 @@
       </picture>
       <div class="shop-banners__wrap-text">
         <h3 class="shop-banners__title">Одежда на любой вкус</h3>
-        <a href="#" class="shop-banners__link primary-link">Перейти</a>
+        <a href="javascript:void(0);" class="shop-banners__link primary-link">Перейти</a>
       </div>
     </li>
   </ul>
@@ -492,18 +545,18 @@
           <li class="footer__menu-item text-str"><a href="tel:+74951234567" class="footer__menu-link primary-small-link">Телефон: +-74-95
               123
               45 67</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">Чат с Нами</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">О Нас</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">Сроки и Условия</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Чат с Нами</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">О Нас</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Сроки и Условия</a></li>
         </ul>
       </div>
       <div class="footer__company">
         <h3 class="footer__menu-title text-title">О компании</h3>
         <ul class="footer__menu list-reset">
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">Что Мы делаем</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">Наши услуги</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">Статьи</a></li>
-          <li class="footer__menu-item text-str"><a href="#" class="footer__menu-link primary-small-link">FAQs</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Что Мы делаем</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Наши услуги</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Статьи</a></li>
+          <li class="footer__menu-item text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">FAQs</a></li>
         </ul>
       </div>
       <div class="footer__newsletter">
@@ -526,16 +579,16 @@
     </div>
     <div class="footer__bottom">
       <ul class="footer__menu footer__menu--flex list-reset">
-        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link primary-small-link">Доставка и
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Доставка и
             самовывоз</a></li>
-        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#" class="footer__menu-link primary-small-link">Оплата</a>
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Оплата</a>
         </li>
-        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="#"
+        <li class="footer__menu-item footer__menu-item--flex text-str"><a href="javascript:void(0);"
             class="footer__menu-link primary-small-link">Возврат-обмен</a></li>
       </ul>
       <ul class="footer__social social list-reset" title="Наши социальные странички">
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--fb"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--fb"
             aria-label="Наша страничка в Фейсбуке">
             <svg class="">
               <use xlink:href="img/sprite.svg#facebook"></use>
@@ -543,7 +596,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--vk"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--vk"
             aria-label="Наша страничка во Вконтакте">
             <svg class="">
               <use xlink:href="img/sprite.svg#vk"></use>
@@ -551,7 +604,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--inst"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--inst"
             aria-label="Наша страничка в Инстаграм">
             <svg class="">
               <use xlink:href="img/sprite.svg#instagram"></use>

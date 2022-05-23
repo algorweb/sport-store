@@ -7,9 +7,9 @@
       <nav class="nav header__nav" aria-label="Навигационное меню">
         <button class="nav__close btn-reset" type="button"></button>
         <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Магазины</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link primary-link--current">Акции</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Доставка и оплата</a></li>
         </ul>
       </nav>
       <a class="header__logo-lnk">
@@ -18,18 +18,19 @@
       <ul class="shop-nav header__shop-nav list-reset">
         <li class="shop-nav__item">
           <form action="#" class="shop-nav__search-form search-form">
-            <!-- <label class="search-form__label">
-              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Имя">
-            </label> -->
-            <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка поиска">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
+            <label class="search-form__label">
+              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Поиск...">
+            </label>
+            <button class="search__btn btn-reset" type="submit">Найти</button>
           </form>
+          <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка открытия поля поиска">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
         </li>
         <li class="shop-nav__item">
-          <a href="#" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
+          <a href="javascript:void(0);" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
             <svg class="">
               <use xlink:href="img/sprite.svg#user"></use>
             </svg>

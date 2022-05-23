@@ -6,6 +6,10 @@ export default {
   $pageCatalog: document.querySelector('.page__catalog'),
   $pageCard: document.querySelector('.page__card'),
   $headerLogoLink: document.querySelector('.header__logo-lnk'),
+
+  $searchForm: document.querySelector('.search-form'),
+  $searchFormBtn: document.querySelector('.search-form__btn'),
+
   $catalogFiltersTop: document.querySelectorAll('.catalog-filters__group'),
   $hideFilters: document.querySelector('.catalog-filters__hide-content'),
   $catalogColumns: document.querySelector('.catalog-columns__list'),

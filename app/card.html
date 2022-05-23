@@ -63,9 +63,9 @@
       <nav class="nav header__nav" aria-label="Навигационное меню">
         <button class="nav__close btn-reset" type="button"></button>
         <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Магазины</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link primary-link--current">Акции</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Доставка и оплата</a></li>
         </ul>
       </nav>
       <a class="header__logo-lnk">
@@ -74,18 +74,19 @@
       <ul class="shop-nav header__shop-nav list-reset">
         <li class="shop-nav__item">
           <form action="#" class="shop-nav__search-form search-form">
-            <!-- <label class="search-form__label">
-              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Имя">
-            </label> -->
-            <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка поиска">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
+            <label class="search-form__label">
+              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Поиск...">
+            </label>
+            <button class="search__btn btn-reset" type="submit">Найти</button>
           </form>
+          <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка открытия поля поиска">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
         </li>
         <li class="shop-nav__item">
-          <a href="#" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
+          <a href="javascript:void(0);" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
             <svg class="">
               <use xlink:href="img/sprite.svg#user"></use>
             </svg>
@@ -112,8 +113,8 @@
         <div class="card__breadcrumbs container-fluid">
           <div class="breadcrumbs">
   <ul class="breadcrumbs__list list-reset">
-    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Главная</a></li>
-    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Магазин</a></li>
+    <li class="breadcrumbs__item"><a href="javascript:void(0);" class="breadcrumbs__link primary-small-link">Главная</a></li>
+    <li class="breadcrumbs__item"><a href="javascript:void(0);" class="breadcrumbs__link primary-small-link">Магазин</a></li>
     <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current primary-small-link">Новое
         поступление</a></li>
   </ul>
@@ -202,7 +203,7 @@
           <ul class="color-select__list list-reset">
             <li class="color-select__item">
               <button class="color-select__btn btn-reset primary-link" data-color="Серо-белый"
-                aria-label="Выберите цвет модели">
+                aria-label="Выберите цвет модели" type="button">
                 <picture>
                   <source srcset="img/card-model/thumbn-1.avif" type="image/avif">
                   <source srcset="img/card-model/thumbn-1.webp" type="image/webp">
@@ -341,19 +342,19 @@
           </div>
           <div class="card-bottom__item">
             <span>Категория:</span>
-            <a href="#" class="primary-small-link">Беговые</a>
-            <a href="#" class="primary-small-link">Мужские</a>
+            <a href="javascript:void(0);" class="primary-small-link">Беговые</a>
+            <a href="javascript:void(0);" class="primary-small-link">Мужские</a>
           </div>
           <div class="card-bottom__item">
             <span>Тэги:</span>
-            <a href="#" class="primary-small-link">Новинки</a>
-            <a href="#" class="primary-small-link">ТОП продаж</a>
+            <a href="javascript:void(0);" class="primary-small-link">Новинки</a>
+            <a href="javascript:void(0);" class="primary-small-link">ТОП продаж</a>
           </div>
           <div class="card-bottom__social">
             <span>Отправить:</span>
             <ul class="social list-reset" title="Наши социальные странички">
               <li class="social__item">
-                <a href="#" target="_blank" class="social__link social__link--fb"
+                <a href="javascript:void(0);" target="_blank" class="social__link social__link--fb"
                   aria-label="Наша страничка в Фейсбуке">
                   <svg class="">
                     <use xlink:href="img/sprite.svg#facebook"></use>
@@ -361,7 +362,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="#" target="_blank" class="social__link social__link--vk"
+                <a href="javascript:void(0);" target="_blank" class="social__link social__link--vk"
                   aria-label="Наша страничка во Вконтакте">
                   <svg class="">
                     <use xlink:href="img/sprite.svg#vk"></use>
@@ -369,7 +370,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="#" target="_blank" class="social__link social__link--inst"
+                <a href="javascript:void(0);" target="_blank" class="social__link social__link--inst"
                   aria-label="Наша страничка в Инстаграм">
                   <svg class="">
                     <use xlink:href="img/sprite.svg#instagram"></use>
@@ -484,7 +485,7 @@
     <div class="footer__top">
       <ul class="footer__social social list-reset" title="Наши социальные странички">
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--fb"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--fb"
             aria-label="Наша страничка в Фейсбуке">
             <svg class="">
               <use xlink:href="img/sprite.svg#facebook"></use>
@@ -492,7 +493,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--vk"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--vk"
             aria-label="Наша страничка во Вконтакте">
             <svg class="">
               <use xlink:href="img/sprite.svg#vk"></use>
@@ -500,7 +501,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--inst"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--inst"
             aria-label="Наша страничка в Инстаграм">
             <svg class="">
               <use xlink:href="img/sprite.svg#instagram"></use>
@@ -509,11 +510,11 @@
         </li>
       </ul>
       <ul class="footer__menu footer__menu--flex list-reset">
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Доставка и
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Доставка и
             самовывоз</a></li>
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Оплата</a>
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Оплата</a>
         </li>
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#"
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);"
             class="footer__menu-link primary-small-link">Возврат-обмен</a></li>
       </ul>
       <div class="footer__currency-lang">

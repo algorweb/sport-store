@@ -954,18 +954,20 @@ var updateCount = function (n) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/header */ "./src/js/components/header.js");
-/* harmony import */ var _components_hero_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hero-swiper */ "./src/js/components/hero-swiper.js");
-/* harmony import */ var _components_hero_catalog_swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/hero-catalog-swiper */ "./src/js/components/hero-catalog-swiper.js");
-/* harmony import */ var _components_catalog_filter_toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/catalog-filter-toggle */ "./src/js/components/catalog-filter-toggle.js");
-/* harmony import */ var _components_catalog_props__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/catalog-props */ "./src/js/components/catalog-props.js");
-/* harmony import */ var _components_card_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card-select */ "./src/js/components/card-select.js");
-/* harmony import */ var _components_stepper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/stepper */ "./src/js/components/stepper.js");
-/* harmony import */ var _components_card_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/card-slider */ "./src/js/components/card-slider.js");
-/* harmony import */ var _components_card_simplebar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/card-simplebar */ "./src/js/components/card-simplebar.js");
-/* harmony import */ var _components_card_bottom_tabs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/card-bottom-tabs */ "./src/js/components/card-bottom-tabs.js");
-/* harmony import */ var _components_scroll_to_top__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/scroll-to-top */ "./src/js/components/scroll-to-top.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_mobile_filter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/mobile-filter */ "./src/js/components/mobile-filter.js");
+/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/search */ "./src/js/components/search.js");
+/* harmony import */ var _components_hero_swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/hero-swiper */ "./src/js/components/hero-swiper.js");
+/* harmony import */ var _components_hero_catalog_swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/hero-catalog-swiper */ "./src/js/components/hero-catalog-swiper.js");
+/* harmony import */ var _components_catalog_filter_toggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/catalog-filter-toggle */ "./src/js/components/catalog-filter-toggle.js");
+/* harmony import */ var _components_catalog_props__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/catalog-props */ "./src/js/components/catalog-props.js");
+/* harmony import */ var _components_card_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/card-select */ "./src/js/components/card-select.js");
+/* harmony import */ var _components_stepper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/stepper */ "./src/js/components/stepper.js");
+/* harmony import */ var _components_card_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/card-slider */ "./src/js/components/card-slider.js");
+/* harmony import */ var _components_card_simplebar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/card-simplebar */ "./src/js/components/card-simplebar.js");
+/* harmony import */ var _components_card_bottom_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/card-bottom-tabs */ "./src/js/components/card-bottom-tabs.js");
+/* harmony import */ var _components_scroll_to_top__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/scroll-to-top */ "./src/js/components/scroll-to-top.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_mobile_filter__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/mobile-filter */ "./src/js/components/mobile-filter.js");
+
 
 
 
@@ -1078,6 +1080,8 @@ __webpack_require__.r(__webpack_exports__);
   $pageCatalog: document.querySelector('.page__catalog'),
   $pageCard: document.querySelector('.page__card'),
   $headerLogoLink: document.querySelector('.header__logo-lnk'),
+  $searchForm: document.querySelector('.search-form'),
+  $searchFormBtn: document.querySelector('.search-form__btn'),
   $catalogFiltersTop: document.querySelectorAll('.catalog-filters__group'),
   $hideFilters: document.querySelector('.catalog-filters__hide-content'),
   $catalogColumns: document.querySelector('.catalog-columns__list'),
@@ -1539,6 +1543,32 @@ __webpack_require__.r(__webpack_exports__);
 // Подключение плавной прокрутки к якорям
 
 var scroll = new (smooth_scroll__WEBPACK_IMPORTED_MODULE_0___default())('.to-top');
+
+/***/ }),
+
+/***/ "./src/js/components/search.js":
+/*!*************************************!*\
+  !*** ./src/js/components/search.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
+
+
+if (_vars__WEBPACK_IMPORTED_MODULE_0__["default"].$searchFormBtn) {
+  var openSearchForm = false;
+  _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$searchFormBtn.addEventListener('click', function (e) {
+    if (!openSearchForm) {
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$searchForm.classList.add('search-form--open');
+      openSearchForm = true;
+    } else {
+      _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$searchForm.classList.remove('search-form--open');
+      openSearchForm = false;
+    }
+  });
+}
 
 /***/ }),
 

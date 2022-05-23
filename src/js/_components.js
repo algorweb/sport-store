@@ -1,4 +1,5 @@
 import './components/header';
+import './components/search';
 import './components/hero-swiper';
 import './components/hero-catalog-swiper';
 import './components/catalog-filter-toggle';

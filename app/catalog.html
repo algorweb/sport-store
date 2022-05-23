@@ -63,9 +63,9 @@
       <nav class="nav header__nav" aria-label="Навигационное меню">
         <button class="nav__close btn-reset" type="button"></button>
         <ul class="nav__list list-reset">
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Магазины</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link primary-link--current">Акции</a></li>
-          <li class="nav__item"><a href="#" class="nav__link primary-link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Магазины</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link primary-link--current">Акции</a></li>
+          <li class="nav__item"><a href="javascript:void(0);" class="nav__link primary-link">Доставка и оплата</a></li>
         </ul>
       </nav>
       <a class="header__logo-lnk">
@@ -74,18 +74,19 @@
       <ul class="shop-nav header__shop-nav list-reset">
         <li class="shop-nav__item">
           <form action="#" class="shop-nav__search-form search-form">
-            <!-- <label class="search-form__label">
-              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Имя">
-            </label> -->
-            <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка поиска">
-              <svg class="">
-                <use xlink:href="img/sprite.svg#search"></use>
-              </svg>
-            </button>
+            <label class="search-form__label">
+              <input type="text" name="Имя" class="input-reset search-form__input" placeholder="Поиск...">
+            </label>
+            <button class="search__btn btn-reset" type="submit">Найти</button>
           </form>
+          <button class="btn-reset search-form__btn" type="button" aria-label="Кнопка открытия поля поиска">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+          </button>
         </li>
         <li class="shop-nav__item">
-          <a href="#" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
+          <a href="javascript:void(0);" class="shop-nav__link shop-nav__link--user" aria-label="Переход на страницу пользователя">
             <svg class="">
               <use xlink:href="img/sprite.svg#user"></use>
             </svg>
@@ -118,14 +119,13 @@
             сложнее, а создать красивые и комфортные кроссовки — это искусство.</p>
           <div class="catalog-slider__btn-wrap">
             <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
-            <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+            <button class="catalog-slider__btn-cart btn btn-reset" type="button">Купить</button>
           </div>
           <picture>
             <source srcset="img/hero-slider-1.avif" type="image/avif">
             <source srcset="img/hero-slider-1.webp" type="image/webp">
-            <img src="img/hero-slider-1.png" class="catalog-slider__img" width="200" height="" alt="200" alt="Самые популярные технологии амортизации обуви">
+            <img src="img/hero-slider-1.png" class="catalog-slider__img" width="200" height="200" alt="Самые популярные технологии амортизации обуви">
           </picture>
-          <!-- <img src="img/hero-slider-1.png"  class="catalog-slider__img" width="200" height="200"> -->
         </div>
       </div>
       <div class="swiper-slide catalog-slider__slide">
@@ -135,14 +135,13 @@
             в спортзале.</p>
           <div class="catalog-slider__btn-wrap">
             <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
-            <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+            <button class="catalog-slider__btn-cart btn btn-reset" type="button">Купить</button>
           </div>
           <picture>
             <source srcset="img/hero-slider-2.avif" type="image/avif">
             <source srcset="img/hero-slider-2.webp" type="image/webp">
-            <img loading="lazy" src="img/hero-slider-2.png" class="catalog-slider__img" width="200" height="" alt="200" alt="Кроссовки беговые мужские ASICS VERSABLAST">
+            <img loading="lazy" src="img/hero-slider-2.png" class="catalog-slider__img" width="200" height="200" alt="Кроссовки беговые мужские ASICS VERSABLAST">
           </picture>
-          <!-- <img src="img/hero-slider-2.png" alt="" class="catalog-slider__img" width="200" height="200"> -->
         </div>
       </div>
       <div class="swiper-slide catalog-slider__slide">
@@ -152,14 +151,13 @@
             в забегах на скорость, так и для обычных тренировок.</p>
           <div class="catalog-slider__btn-wrap">
             <a href="" class="catalog-slider__btn-more btn btn-reset">Подробнее</a>
-            <button class="catalog-slider__btn-cart btn btn-reset">Купить</button>
+            <button class="catalog-slider__btn-cart btn btn-reset" type="button">Купить</button>
           </div>
           <picture>
             <source srcset="img/hero-slider-3.avif" type="image/avif">
             <source srcset="img/hero-slider-3.webp" type="image/webp">
             <img loading="lazy" src="img/hero-slider-3.png" class="catalog-slider__img" width="200" height="200" alt="Кроссовки мужские ASICS MAGIC SPEED">
           </picture>
-          <!-- <img src="img/hero-slider-3.png" alt="" class="catalog-slider__img" width="200" height="200"> -->
         </div>
       </div>
     </div>
@@ -181,8 +179,8 @@
         <div class="catalog__breadcrumbs container-fluid">
           <div class="breadcrumbs">
   <ul class="breadcrumbs__list list-reset">
-    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Главная</a></li>
-    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link primary-small-link">Магазин</a></li>
+    <li class="breadcrumbs__item"><a href="javascript:void(0);" class="breadcrumbs__link primary-small-link">Главная</a></li>
+    <li class="breadcrumbs__item"><a href="javascript:void(0);" class="breadcrumbs__link primary-small-link">Магазин</a></li>
     <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current primary-small-link">Новое
         поступление</a></li>
   </ul>
@@ -416,7 +414,7 @@
             <div class="catalog-grid">
   <div class="catalog-grid__props catalog-props">
     <div class="catalog-props__top">
-      <button class="btn-reset catalog-mobile-filters">
+      <button class="btn-reset catalog-mobile-filters" type="button">
         <svg class="">
           <use xlink:href="img/sprite.svg#filter"></use>
         </svg>
@@ -425,14 +423,14 @@
       <div class="catalog-props__columns catalog-columns">
         <span class="catalog-columns__text">Количество столбцов:</span>
         <ul class="catalog-columns__list list-reset">
-          <li class="catalog-columns__item"><button class="btn-reset primary-link catalog-columns__btn"
-              data-columns="3">3</button></li>
+          <li class="catalog-columns__item"><button class="btn-reset primary-link catalog-columns__btn" data-columns="3"
+              type="button">3</button></li>
           <li class="catalog-columns__item"><button
-              class="btn-reset primary-link  catalog-columns__btn catalog-columns__btn--current"
-              data-columns="4">4</button>
+              class="btn-reset primary-link  catalog-columns__btn catalog-columns__btn--current" data-columns="4"
+              type="button">4</button>
           </li>
-          <li class="catalog-columns__item"><button class="btn-reset primary-link catalog-columns__btn"
-              data-columns="5">5</button></li>
+          <li class="catalog-columns__item"><button class="btn-reset primary-link catalog-columns__btn" data-columns="5"
+              type="button">5</button></li>
         </ul>
       </div>
       <div class="custom-select" tabindex="0">
@@ -447,7 +445,7 @@
       </div>
     </div>
     <div class="catalog-props__choice catalog-choice">
-      <button class="btn-reset catalog-choice__clear">Clear all</button>
+      <button class="btn-reset catalog-choice__clear" type="button">Clear all</button>
     </div>
   </div>
   <ul class="catalog-grid__content list-reset" data-grid-columns="4">
@@ -469,7 +467,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -492,7 +495,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -515,7 +523,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -540,7 +553,12 @@
             <span class="primary-product__oldprice">3000 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -563,7 +581,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -587,7 +610,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -611,7 +639,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -634,7 +667,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -657,7 +695,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -681,7 +724,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -704,7 +752,12 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -727,18 +780,24 @@
             <span class="primary-product__price">2200 ₽</span>
           </div>
           <div class="primary-product__cart">
-            <button class="primary-product__to-cart btn-reset">Добавить в корзину</button>
+            <button class="primary-product__to-cart btn-reset" type="button"
+              aria-label="Кнопка добавить товар в корзину">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     </li>
   </ul>
   <ul class="pagination list-reset">
-    <li class="pagination__item"><a href="#" class="pagination__link pagination__link--current">1</a></li>
-    <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
-    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+    <li class="pagination__item"><a href="javascript:void(0);" class="pagination__link pagination__link--current">1</a>
+    </li>
+    <li class="pagination__item"><a href="javascript:void(0);" class="pagination__link">2</a></li>
+    <li class="pagination__item"><a href="javascript:void(0);" class="pagination__link">3</a></li>
     <li class="pagination__item">
-      <a href="#" class="pagination__link">
+      <a href="javascript:void(0);" class="pagination__link">
         Next
         <svg class="">
           <use xlink:href="img/sprite.svg#angle-right"></use>
@@ -758,7 +817,7 @@
     <div class="footer__top">
       <ul class="footer__social social list-reset" title="Наши социальные странички">
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--fb"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--fb"
             aria-label="Наша страничка в Фейсбуке">
             <svg class="">
               <use xlink:href="img/sprite.svg#facebook"></use>
@@ -766,7 +825,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--vk"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--vk"
             aria-label="Наша страничка во Вконтакте">
             <svg class="">
               <use xlink:href="img/sprite.svg#vk"></use>
@@ -774,7 +833,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" target="_blank" class="social__link social__link--inst"
+          <a href="javascript:void(0);" target="_blank" class="social__link social__link--inst"
             aria-label="Наша страничка в Инстаграм">
             <svg class="">
               <use xlink:href="img/sprite.svg#instagram"></use>
@@ -783,11 +842,11 @@
         </li>
       </ul>
       <ul class="footer__menu footer__menu--flex list-reset">
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Доставка и
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Доставка и
             самовывоз</a></li>
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#" class="footer__menu-link primary-small-link">Оплата</a>
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);" class="footer__menu-link primary-small-link">Оплата</a>
         </li>
-        <li class="footer__menu-item footer__menu-item--flex"><a href="#"
+        <li class="footer__menu-item footer__menu-item--flex"><a href="javascript:void(0);"
             class="footer__menu-link primary-small-link">Возврат-обмен</a></li>
       </ul>
       <div class="footer__currency-lang">
