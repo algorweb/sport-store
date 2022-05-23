@@ -3,13 +3,13 @@ import vars from '../_vars';
 if (document.querySelector('.page__catalog')) {
   vars.$catalogFiltersTop.forEach(el => {
     el.addEventListener('click', (e) => {
-      e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters--open');
+      e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters__group--open');
     });
   });
 
   vars.$hideFilters.addEventListener('click', (e) => {
     vars.$catalogFiltersTop.forEach(el => {
-      el.closest('.catalog-filters__group').classList.remove('catalog-filters--open');
+      el.closest('.catalog-filters__group').classList.remove('catalog-filters__group--open');
     });
   });
 

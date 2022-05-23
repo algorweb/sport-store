@@ -1325,12 +1325,12 @@ __webpack_require__.r(__webpack_exports__);
 if (document.querySelector('.page__catalog')) {
   _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFiltersTop.forEach(function (el) {
     el.addEventListener('click', function (e) {
-      e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters--open');
+      e.currentTarget.closest('.catalog-filters__group').classList.toggle('catalog-filters__group--open');
     });
   });
   _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$hideFilters.addEventListener('click', function (e) {
     _vars__WEBPACK_IMPORTED_MODULE_0__["default"].$catalogFiltersTop.forEach(function (el) {
-      el.closest('.catalog-filters__group').classList.remove('catalog-filters--open');
+      el.closest('.catalog-filters__group').classList.remove('catalog-filters__group--open');
     });
   });
 
